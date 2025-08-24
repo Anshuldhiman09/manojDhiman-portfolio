@@ -8,11 +8,10 @@ export default function Hero() {
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mt-2">
             Manoj Dhiman
           </h1>
-          <p className="mt-4 text-slate-300"></p>
-          <div className="mt-6 flex gap-3">
-            <a href="#projects" className="btn">View Projects</a>
-            <a href="#contact" className="btn bg-white text-slate-900">Contact Me</a>
-          </div>
+          <p className="mt-4 text-slate-300">
+            Experienced Mechanical Manager | PET Recycling Specialist | 23+ Years in Industrial Maintenance
+          </p>
+         
         </div>
 
         {/* Right: Circular Image */}

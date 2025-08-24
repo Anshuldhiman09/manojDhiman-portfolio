@@ -1,6 +1,7 @@
-import { Home, Linkedin, Facebook, X, Download } from "lucide-react";
+import { Home, Linkedin, Facebook, X, Download, Instagram } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { link } from "framer-motion/client";
 
 export default function FloatingCircularNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +42,11 @@ export default function FloatingCircularNav() {
       id: "facebook",
       icon: <Facebook size={20} />,
       link: "https://www.facebook.com/manoj.vishkarma.161",
+    },
+    {
+      id: "instagram",
+      icon:<Instagram size={20}/>,
+      link:"https://www.instagram.com/maonj.vishkarma.161"
     },
     {
       id: "cv",
