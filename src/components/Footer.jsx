@@ -28,12 +28,7 @@ export default function Footer() {
       id: "facebook",
       icon: <Facebook size={20} />,
       link: "https://www.facebook.com/manoj.vishkarma.161",
-    },
-    {
-      id: "github",
-      icon: <Github size={20} />,
-      link: "https://github.com/yourusername", // add your GitHub
-    },
+    }
   ];
 
   const scrollToTop = () => {
