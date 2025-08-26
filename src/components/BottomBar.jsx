@@ -1,11 +1,11 @@
 import { Home, Linkedin, Facebook, X, Download, Instagram } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { link } from "framer-motion/client";
 
 export default function FloatingCircularNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const [offset, setOffset] = useState(24); // distance from bottom (default 24px)
 
   // Show nav after scrolling past Hero
   useEffect(() => {
@@ -14,16 +14,26 @@ export default function FloatingCircularNav() {
       if (!hero) return;
 
       const heroBottom = hero.offsetTop + hero.offsetHeight;
-      if (window.scrollY > heroBottom) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
-        setIsOpen(false);
+      setShowNav(window.scrollY > heroBottom);
+
+      // Check footer collision
+      const footer = document.querySelector("footer");
+      if (footer) {
+        const footerTop = footer.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (footerTop < windowHeight) {
+          // nav is overlapping footer → push it up
+          const overlap = windowHeight - footerTop;
+          setOffset(overlap + 24);
+        } else {
+          setOffset(24);
+        }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // initial check
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -45,8 +55,8 @@ export default function FloatingCircularNav() {
     },
     {
       id: "instagram",
-      icon:<Instagram size={20}/>,
-      link:"https://www.instagram.com/maonj.vishkarma.161"
+      icon: <Instagram size={20} />,
+      link: "https://www.instagram.com/maonj.vishkarma.161",
     },
     {
       id: "cv",
@@ -64,7 +74,8 @@ export default function FloatingCircularNav() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 50 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-6 right-6 z-50 flex items-center justify-center"
+          style={{ bottom: offset, right: "1.5rem" }}
+          className="fixed z-50 flex items-center justify-center"
         >
           {/* Main Button */}
           <div
