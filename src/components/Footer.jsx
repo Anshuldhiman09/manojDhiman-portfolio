@@ -1,13 +1,18 @@
-import { link } from "framer-motion/client";
-import { Github, Instagram, Linkedin, AtSign, Facebook, icons, Mail } from "lucide-react";
+import {
+  Github,
+  Instagram,
+  Linkedin,
+  AtSign,
+  Facebook,
+  Mail,
+} from "lucide-react";
 
 export default function Footer() {
   const socialLinks = [
-
     {
       id: "gmail",
-      icon:<Mail/>,
-      link:"mailto:manojvishwakarma05891@gmail.com",
+      icon: <Mail size={20} />,
+      link: "mailto:manojvishwakarma05891@gmail.com",
     },
     {
       id: "linkedin",
@@ -24,6 +29,11 @@ export default function Footer() {
       icon: <Facebook size={20} />,
       link: "https://www.facebook.com/manoj.vishkarma.161",
     },
+    {
+      id: "github",
+      icon: <Github size={20} />,
+      link: "https://github.com/yourusername", // add your GitHub
+    },
   ];
 
   const scrollToTop = () => {
@@ -33,13 +43,28 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-slate-400 py-12 mt-16 border-t border-white/10">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        {/* Left Section */}
         <div className="text-center md:text-left">
-          <p className="text-sm">&copy; {new Date().getFullYear()} Manoj Dhiman</p>
+          <p className="text-sm">&copy; 2024 Anshul Dhiman. All rights reserved.</p>
           <p className="text-xs text-slate-500 mt-1">
-           Mechanical Maintenance • PET Wash Line • Team Leadership • Inventory Management • Equipment Optimization
+            Designed & Developed by{" "}
+            <span className="text-white font-medium">Anshul Dhiman </span>
+          </p>
+          {/* Portfolio Link */}
+          <p className="text-xs mt-1">
+            <a
+              href="https://anshuldhiman.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-500 hover:text-white transition"
+            >
+              Visit My Portfolio
+            </a>
           </p>
         </div>
 
+        {/* Social Icons */}
         <div className="flex items-center gap-4">
           {socialLinks.map((item) => (
             <a
@@ -54,6 +79,7 @@ export default function Footer() {
           ))}
         </div>
 
+        {/* Back to Top */}
         <button
           onClick={scrollToTop}
           className="text-sm text-slate-400 hover:text-white transition"

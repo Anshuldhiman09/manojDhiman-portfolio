@@ -10,14 +10,14 @@ export default function About() {
             <h2 className="section-title">About</h2>
             <p className="section-subtitle">Who I am & what I do</p>
             <p className="mt-6 text-slate-300 leading-7">
-              Experienced Mechanical Manager with over 23 years in the
-              manufacturing and PET recycling industry. Skilled in breakdown and
-              preventive maintenance, team leadership, and operations of PET
-              wash line equipment (Crusher, Label Remover, Friction Washer, Hot
-              Washer, Dryer). Expertise in mechanical design, fabrication, and
-              inventory management. Dedicated to optimizing plant performance,
-              minimizing downtime, and driving cross-functional teams to achieve
-              organizational goals.
+              Experienced Mechanical Manager with over 23 years in manufacturing
+              and PET recycling. Proficient in corrective and preventive
+              maintenance, team supervision, and operation of PET wash line
+              equipment (Crusher, Label Remover, Friction Washer, Hot Washer,
+              Dryer). Skilled in mechanical design, fabrication, and stock
+              control. Committed to enhancing plant efficiency, reducing
+              downtime, and guiding cross-functional teams to accomplish
+              organizational objectives.
             </p>
 
             {/* Strengths */}
@@ -26,10 +26,10 @@ export default function About() {
                 Core Strengths
               </h3>
               <ul className="list-disc list-inside text-slate-300">
-                <li>Proven leadership in mechanical maintenance teams</li>
-                <li>Strong analytical and problem-solving skills</li>
+                <li>Demonstrated leadership in mechanical maintenance teams</li>
+                <li>Strong analytical and troubleshooting abilities</li>
                 <li>
-                  Expertise in PET recycling plant machinery and operations
+                 In-depth knowledge of PET recycling plant machinery and processes
                 </li>
                 <li>Efficient spare parts and inventory management</li>
               </ul>
