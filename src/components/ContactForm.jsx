@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ import navigation hook
 import emailjs from "emailjs-com";
 
 export default function ContactForm() {
@@ -7,6 +8,8 @@ export default function ContactForm() {
     email: "",
     message: ""
   });
+
+  const navigate = useNavigate(); // ✅ initialize navigation
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -37,6 +40,7 @@ export default function ContactForm() {
     <section className="section py-12">
       <div className="max-w-lg mx-auto bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg">
         <h2 className="text-2xl font-bold mb-6 text-center text-black">Contact Me</h2>
+        
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="text"
@@ -65,6 +69,7 @@ export default function ContactForm() {
             required
             className="w-full p-3 border rounded-lg bg-white text-gray-900 dark:bg-gray-800 dark:text-white"
           />
+          
           <button
             type="submit"
             className="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition"
@@ -72,6 +77,14 @@ export default function ContactForm() {
             Send Message
           </button>
         </form>
+
+        {/* 🔙 Back to Home Button */}
+        <button
+          onClick={() => navigate("/")}
+          className="w-full mt-4 bg-gray-500 text-white p-3 rounded-lg hover:bg-gray-600 transition"
+        >
+          Back to Home
+        </button>
       </div>
     </section>
   );
