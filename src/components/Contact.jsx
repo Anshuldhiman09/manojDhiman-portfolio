@@ -21,7 +21,7 @@ export default function Contact() {
 
           {/* Download CV button */}
           <a
-            href="/manojkumar.pdf" // file inside /public
+            href="/manojkumarResume.pdf" // file inside /public
             download
             className="btn px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition inline-block"
           >
