@@ -61,7 +61,7 @@ export default function FloatingCircularNav() {
     {
       id: "cv",
       icon: <Download size={20} />,
-      link: "/manojkumar.pdf",
+      link: "/cv.pdf",
       download: true,
     },
   ];
