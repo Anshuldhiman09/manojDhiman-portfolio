@@ -1,4 +1,4 @@
-export default function Hero() {
+export default function Intro() {
   return (
     <section className="section pt-28" id="home">
       <div className="container-lg grid md:grid-cols-2 gap-8 items-center">

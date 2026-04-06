@@ -20,7 +20,6 @@ export default function About() {
               organizational objectives.
             </p>
 
-            {/* Strengths */}
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-white mb-2">
                 Core Strengths
@@ -29,14 +28,14 @@ export default function About() {
                 <li>Demonstrated leadership in mechanical maintenance teams</li>
                 <li>Strong analytical and troubleshooting abilities</li>
                 <li>
-                 In-depth knowledge of PET recycling plant machinery and processes
+                  In-depth knowledge of PET recycling plant machinery and
+                  processes
                 </li>
                 <li>Efficient spare parts and inventory management</li>
               </ul>
             </div>
           </div>
 
-          {/* Right/Card content with heading inside */}
           <div>
             <ul className="card p-5 space-y-3">
               <li className="text-lg font-semibold text-white mb-3">
@@ -63,18 +62,29 @@ export default function About() {
       </section>
 
       {/* Experience Section */}
-      <section className="section" id="experience">
+      <section className="section" id="Experience">
         <div className="container-lg">
           <h2 className="section-title">Professional Experience</h2>
           <p className="section-subtitle">Career achievements and roles</p>
 
           <ul className="mt-6 space-y-6">
             <li>
-              <h3 className="text-lg font-semibold">
-                Senior Mechanical Manager
-              </h3>
+              <h3 className="text-lg font-semibold">Mechanical Manager</h3>
               <p className="text-slate-400">
-                JB Ecotex Ltd. | Dec 2024 – Present
+                Silver Ecotex Ltd. | Aug 2025 – Present
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mt-2">
+                <li>
+                  Oversee mechanical maintenance operations across the plant
+                </li>
+                <li>Ensure optimal functioning of PET wash line equipment</li>
+                <li>Lead and mentor maintenance team to reduce downtime</li>
+              </ul>
+            </li>
+            <li>
+              <h3 className="text-lg font-semibold">Mechanical Manager</h3>
+              <p className="text-slate-400">
+                JB Ecotex Ltd. | Dec 2024 – june 2025
               </p>
               <ul className="list-disc list-inside text-slate-300 mt-2">
                 <li>
@@ -142,10 +152,6 @@ export default function About() {
           <p className="section-subtitle">Academic qualifications</p>
 
           <ul className="mt-6 space-y-4">
-            <li>
-              <h3 className="text-lg font-semibold">Bachelor of Arts (B.A.)</h3>
-              <p className="text-slate-400">CCSU, Meerut | 1998</p>
-            </li>
             <li>
               <h3 className="text-lg font-semibold">ITI (Fitter)</h3>
               <p className="text-slate-400">

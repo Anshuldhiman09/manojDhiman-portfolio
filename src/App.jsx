@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
@@ -8,6 +7,7 @@ import ContactForm from "./components/ContactForm";
 
 import Footer from "./components/Footer";
 import BottomBar from "./components/BottomBar";
+import Intro from "./components/Intro";
 
 export default function App() {
   return (
@@ -19,7 +19,7 @@ export default function App() {
             path="/"
             element={
               <>
-                <Hero />
+                <Intro />
                 <About />
                 <BottomBar />
                 <Skills />
